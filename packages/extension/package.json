@@ -1,0 +1,10 @@
+{
+  "name": "@idnerd/overlay-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": { "build": "tsup && node scripts/package.mjs", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@idnerd/overlay-core": "0.1.0" },
+  "devDependencies": { "@types/chrome": "^0.0.280" }
+}

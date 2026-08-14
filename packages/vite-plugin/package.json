@@ -1,0 +1,19 @@
+{
+  "name": "@idnerd/overlay",
+  "version": "0.1.0",
+  "description": "Dev-only UI feedback overlay for React+Vite — tag elements, copy AI-ready feedback to clipboard",
+  "type": "module",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "require": "./dist/index.cjs.js", "import": "./dist/index.esm.js" },
+    "./vite": { "types": "./dist/vite.d.ts", "require": "./dist/vite.cjs.js", "import": "./dist/vite.esm.js" }
+  },
+  "files": ["dist"],
+  "scripts": { "build": "tsup", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@idnerd/overlay-core": "0.1.0" },
+  "peerDependencies": { "vite": "^6.0.0 || ^7.0.0 || ^8.0.0" },
+  "peerDependenciesMeta": { "vite": { "optional": true } }
+}

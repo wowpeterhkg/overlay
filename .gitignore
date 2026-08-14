@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-ext/
+demo/node_modules/
+demo/dist/
+.superpowers/
+test-results/
+playwright-report/
+
+# Internal planning artifacts — kept locally, never published
+.scratch/
+docs/superpowers/

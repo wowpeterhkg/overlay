@@ -1,0 +1,13 @@
+{
+  "name": "@idnerd/overlay-mcp",
+  "version": "0.1.0",
+  "description": "MCP bridge for the overlay extension — list/resolve/create UI feedback tags from Claude Code or Cursor",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "overlay-mcp": "dist/cli.js" },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "scripts": { "build": "tsup", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.12.0", "ws": "^8.18.0", "zod": "^3.25.76" },
+  "devDependencies": { "@types/ws": "^8.5.0" }
+}

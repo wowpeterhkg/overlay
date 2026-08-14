@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Overlay — UI feedback tags (dev)",
+  "version": "0.2.2",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "unlimitedStorage", "activeTab", "scripting"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*", "<all_urls>"],
+  "background": { "service_worker": "sw.js", "type": "module" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["probe.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html" },
+  "icons": { "128": "icon128.png" }
+}
