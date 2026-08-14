@@ -137,6 +137,3 @@ The plugin is `apply: 'serve'` — it does not exist during `vite build` — and
 
 - Root `package.json` pins `overrides: { "zod": "3.25.76" }`. `@idnerd/overlay-mcp` and its transitive `@modelcontextprotocol/sdk` dependency both pull in `zod`; without the override, npm workspaces can dual-hoist two `zod` versions, which TypeScript then fails to reconcile in structural checks (`error TS2589: Type instantiation is excessively deep`). Pinning a single version across the workspace avoids it. Don't remove without re-checking that combination.
 
-## Acknowledgements
-
-The overlay concept, UI, tag schema, extension, bridge, and MCP integration are original work. Two structural choices in the Vite plugin were inspired by [instruckt](https://github.com/joshcirre/instruckt) (MIT) — the serve-only injection pattern (`apply: 'serve'` + `transformIndexHtml`, so the overlay exists in dev and never in builds) and the dual-entry package layout (`.` client / `./vite` plugin). No code was copied and there is no dependency; thanks to joshcirre for a clean reference on those patterns.
